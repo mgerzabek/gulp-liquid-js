@@ -3,8 +3,6 @@ const PluginError = require('plugin-error')
 const Liquid = require('liquidjs')
 const replaceExtension = require('replace-ext')
 
-const PLUGIN_NAME = 'gulp-liquid-js'
-
 const defaultOptions = {
   engine: {
     extname: '.liquid',
@@ -47,10 +45,6 @@ module.exports = (options = {}) => {
         }
       }
 
-      if (file.data) {
-        options.data = objectAssignDeep(options.data, file.data)
-      }
-
       if (file.isNull()) {
         return callback(null, file)
       }
@@ -61,9 +55,10 @@ module.exports = (options = {}) => {
 
       if (file.isBuffer()) {
         file.path = replaceExtension(file.path, options.ext)
-
-        engine.parseAndRender(file.contents.toString(), options.data)
-          .then((output) => {
+        engine.renderFile(file.page.layout, {
+          content: file.contents.toString(),
+          page: file.page
+        }).then((output) => {
             file.contents = Buffer.from(output)
             return callback(null, file)
           }, err => callback(new PluginError(PLUGIN_NAME, err)))
