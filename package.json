@@ -1,5 +1,5 @@
 {
-  "name": "gulp-liquid-js",
+  "name": "gulp-liquidify",
   "version": "0.0.1",
   "description": "Liquid plugin for gulp",
   "license": "MIT",
