@@ -64,7 +64,7 @@ module.exports = (options = {}) => {
           }, err => callback(new PluginError(PLUGIN_NAME, err)))
       }
 
-      return null
+      return callback(null, file)
     }
   })
 }
