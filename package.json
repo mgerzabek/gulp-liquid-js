@@ -1,0 +1,29 @@
+{
+  "name": "gulp-liquid-js",
+  "version": "0.0.1",
+  "description": "Liquid plugin for gulp",
+  "license": "MIT",
+  "repository": "https://github.com/mgerzabek/gulp-liquid-js",
+  "author": {
+    "name": "Michael Gerzabek",
+    "email": "michael.gerzabek@gmail.com"
+  },
+  "scripts": {
+    "lint": "eslint ./index.js",
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulp liquid liquidjs"
+  ],
+  "dependencies": {
+    "liquidjs": "^9.36.0",
+    "plugin-error": "^1.0.1",
+    "replace-ext": "^2.0.0"
+  }
+}
