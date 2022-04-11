@@ -1,7 +1,7 @@
-const Transform = require('stream').Transform
-const PluginError = require('plugin-error')
-const {Liquid} = require('liquidjs')
-const replaceExtension = require('replace-ext')
+import { Transform } from 'stream'
+import PluginError from 'plugin-error'
+import { Liquid } from 'liquidjs'
+import replaceExtension from 'replace-ext'
 
 const PLUGIN_NAME = 'gulp-liquidify'
 
@@ -16,7 +16,7 @@ const defaultOptions = {
   data: {},
 }
 
-module.exports = (options = {}) => {
+export default (options = {}) => {
   
   options = {
     ...defaultOptions,
