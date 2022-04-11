@@ -3,6 +3,8 @@ const PluginError = require('plugin-error')
 const {Liquid} = require('liquidjs')
 const replaceExtension = require('replace-ext')
 
+const PLUGIN_NAME = 'gulp-liquidify'
+
 const defaultOptions = {
   engine: {
     extname: '.liquid',
