@@ -1,6 +1,6 @@
 const Transform = require('stream').Transform
 const PluginError = require('plugin-error')
-const Liquid = require('liquidjs')
+const {Liquid} = require('liquidjs')
 const replaceExtension = require('replace-ext')
 
 const defaultOptions = {
