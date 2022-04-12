@@ -1,6 +1,6 @@
 {
   "name": "gulp-liquidify",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Liquid plugin for gulp",
   "license": "MIT",
   "repository": "https://github.com/mgerzabek/gulp-liquid-js",
